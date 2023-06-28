@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { FaSearch } from "react-icons/fa";
+import { FcSpeaker } from "react-icons/fc";
+import Navbar from './Navbar';
 
 const Dictionary = () => {
     const [searchWord, setSearchWord] = useState('');
@@ -12,11 +15,6 @@ const Dictionary = () => {
         setSearchWord(event.target.value);
     }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        fetchSearchResults();
-    }
-
     const fetchSearchResults = async () => {
         let response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchWord}`, {
             method: "GET",
@@ -28,18 +26,27 @@ const Dictionary = () => {
         setSearchResults(data[0]);
     }
 
-    return (
-        <div>
-            <h1>Dictionary</h1>
-            <form>
+    function playAudio() {
+        let audio = new Audio(data.phonetics[0].audio);
+        audio.play();
+    }
 
-                <label>
-                    Search for a word:
-                    <input type="text" value={searchWord} onChange={handleSearchWordChange} />
-                </label>
-                <br />
-                <button onClick={handleSubmit}>Get Results!</button>
-            </form>
+    return (
+       
+        <div className="App">
+        {/* <Navbar/> */}
+           {/* <h1>Free Dictionary</h1> */}
+           <div className='searchBox'>
+           <div className='container'>
+            <img src='https://thumbs.dreamstime.com/b/dictionary-dictionary-study-translate-bilingual-english-background-book-117950458.jpg'
+             height={"400px"} width={"530px"}  > 
+            </img> </div>
+                  <br/>
+                    <input type="text" placeholder='Search..' value={searchWord} onChange={handleSearchWordChange} />
+               
+                
+                <button onClick={fetchSearchResults}> <FaSearch size="20px" /> </button>
+                </div>
             <ul>
 
 
@@ -47,13 +54,13 @@ const Dictionary = () => {
                     <div className="showResults">
                         <h2>
                             {data.word}{" "}
-                            {/* <button
-			onClick={() => {
-				playAudio();
-			}}
-			>
-			<FcSpeaker size="30px" />
-			</button> */}
+                            <button
+                                onClick={() => {
+                                    playAudio();
+                                }}
+                            >
+                                <FcSpeaker size="30px" />
+                            </button>
                         </h2>
                         <h4>Parts of speech:</h4>
 
@@ -68,6 +75,8 @@ const Dictionary = () => {
                     </div>
                 )}
             </ul>
+            <br/> <br/> 
+        
         </div>
     );
 }
