@@ -23,6 +23,7 @@ const Login = () => {
                                 aria-label="Close"
                             ></button>
                         </div>
+                        <br/>
                         <div className="modal-body">
                             <button className="btn btn-primary w-100 mb-4">
                                 <span className="fa fa-google me-2"></span> Sign in With Google

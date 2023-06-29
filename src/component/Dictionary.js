@@ -38,17 +38,18 @@ const Dictionary = () => {
            {/* <h1>Free Dictionary</h1> */}
            <div className='searchBox'>
            <div className='container'>
-            <img src='https://thumbs.dreamstime.com/b/dictionary-dictionary-study-translate-bilingual-english-background-book-117950458.jpg'
-             height={"400px"} width={"530px"}  > 
-            </img> </div>
+            <img src='https://wallpaperaccess.com/full/5680385.jpg'
+             height={"400px"} width={"530px"} alt='N-DICTIONARY' > 
+            </img> 
+            </div>
                   <br/>
-                    <input type="text" placeholder='Search..' value={searchWord} onChange={handleSearchWordChange} />
+                  {/* <input type="text" class="form-control searchtxt" id="exampleForm" placeholder="John Smith" value={searchWord} onChange={handleSearchWordChange}/> */}
+                    <input className='searchtxt' type="text" placeholder='Search..' value={searchWord} onChange={handleSearchWordChange} />
                
                 
                 <button onClick={fetchSearchResults}> <FaSearch size="20px" /> </button>
                 </div>
             <ul>
-
 
                 {data && (
                     <div className="showResults">
@@ -63,14 +64,8 @@ const Dictionary = () => {
                             </button>
                         </h2>
                         <h4>Parts of speech:</h4>
-
-
                         <p>{data.meanings[0].partOfSpeech}</p>
-
-
                         <h4>Definition:</h4>
-
-
                         <p>{data.meanings[0].definitions[0].definition}</p>
                     </div>
                 )}
