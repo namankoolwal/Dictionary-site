@@ -18,7 +18,6 @@ const Dictionary = () => {
     const fetchSearchResults = async () => {
         let response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchWord}`, {
             method: "GET",
-
         });
 
         let data = await response.json();
@@ -32,21 +31,18 @@ const Dictionary = () => {
     }
 
     return (
-       
         <div className="App">
         {/* <Navbar/> */}
            {/* <h1>Free Dictionary</h1> */}
            <div className='searchBox'>
            <div className='container'>
-            <img src='https://wallpaperaccess.com/full/5680385.jpg'
-             height={"400px"} width={"530px"} alt='N-DICTIONARY' > 
+            <img src='https://th.bing.com/th/id/R.1d7cb6862cf0470ea13adfdf4ef5aba4?rik=T4VmwpMmQGEoOA&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f2%2f0%2f5%2f165863.jpg&ehk=PmEgFR2HtNK%2f7aKmqMKzSTuicLAD%2f1HJFT0bPojnxzU%3d&risl=&pid=ImgRaw&r=0'
+             height={"400px"} width={"600px"} alt='N-DICTIONARY' > 
             </img> 
             </div>
                   <br/>
                   {/* <input type="text" class="form-control searchtxt" id="exampleForm" placeholder="John Smith" value={searchWord} onChange={handleSearchWordChange}/> */}
                     <input className='searchtxt' type="text" placeholder='Search..' value={searchWord} onChange={handleSearchWordChange} />
-               
-                
                 <button onClick={fetchSearchResults}> <FaSearch size="20px" /> </button>
                 </div>
             <ul>
@@ -58,8 +54,7 @@ const Dictionary = () => {
                             <button
                                 onClick={() => {
                                     playAudio();
-                                }}
-                            >
+                                }}>
                                 <FcSpeaker size="30px" />
                             </button>
                         </h2>

@@ -29,12 +29,12 @@ h4{
 }
 
 .searchtxt{
-width: 500px;
+width: 580px;
 height: 38px;
 font-size: 20px;
 padding-left: 10px;
 filter: drop-shadow(6px 5px 4px #646363);
-border: 1px solid green;
+border: 1px solid #12b958;
 
 }
 .searchtxt:focus{
@@ -81,7 +81,7 @@ cursor: pointer;
 }
 .navbar-brand{
   color: black;
-filter: drop-shadow(6px 5px 4px #cecccc);
+filter: drop-shadow(6px 5px 4px #dfdcdc);
 
 }
 h1{

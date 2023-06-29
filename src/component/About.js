@@ -23,14 +23,14 @@ const About = () => {
               provident est sint corporis, dolorem esse autem soluta molestiae
               optio quisquam eligendi obcaecati minima? */}
               <br />
-              HII.. THERE...🙌🏼
+              HII.. THERE...
               <br />
-              This Site Is Developed By Naman Khandelwal👦🏼
+              This Is A Demo Free Dictionary Site
               <br />
-              This Is A Demo Free Dictionary Site🖤
+              Developed By Naman Khandelwal
               <br />
-              Thank You For Visiting..🍀
-              <h5>Have A Great Day😀</h5>
+              Thank You For Visiting..
+              <h5>Have A Great Day</h5>
             </p>
             <br />
             <NavLink to="/contact" className="btn btn-outline-primary px-3">
