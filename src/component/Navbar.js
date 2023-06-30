@@ -58,7 +58,7 @@ const Navbar = () => {
               {
                 isAuthenticated && (
               <li className="nav-item">
-               <img className="profile" src={user.picture}></img> 
+               <img className="profile" src={user.picture} alt={user.name} title={user.nickname} ></img> 
               
               {/* <p>{user.nickname} </p> */}
               </li> 

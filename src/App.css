@@ -93,6 +93,8 @@ filter: drop-shadow(6px 5px 4px #cecccc);
   width: 35px;
   /* display: block; */
   margin-top: 1px;
+filter: drop-shadow(3px 2px 1px #dfdcdc);
+
   
 }
 
