@@ -36,8 +36,8 @@ const Dictionary = () => {
            {/* <h1>Free Dictionary</h1> */}
            <div className='searchBox'>
            <div className='container'>
-            <img src='/assets/book.jpeg'
-             height={"400px"} width={"600px"} alt='N-DICTIONARY' > 
+            <img className='dictimg' src='/assets/book.jpeg'
+             alt='N-DICTIONARY' > 
             </img> 
             </div>
                   <br/>

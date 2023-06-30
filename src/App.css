@@ -40,7 +40,9 @@ border: 1px solid #12b958;
 .searchtxt:focus{
   outline: none;
 }
-img {
+.dictimg {
+  height: 400px;
+  width: 600px;
     display: block;
     margin:auto;
     border-radius: 10px;
@@ -63,7 +65,7 @@ filter: drop-shadow(6px 5px 4px #646363);
 
 .showResults{
   font-size: 22px;
-width: 550px;
+width: 650px;
 padding: 20px;
 filter: drop-shadow(6px 5px 4px #bdbcbc);
 
@@ -74,11 +76,11 @@ background: none;
 border: none;
 cursor: pointer;
 }
-.navbar-nav a{
+/* .navbar-nav a{
   font-size: 18px;
   color: black;
   
-}
+} */
 .navbar-brand{
   color: black;
 filter: drop-shadow(6px 5px 4px #dfdcdc);
@@ -93,8 +95,53 @@ filter: drop-shadow(6px 5px 4px #cecccc);
   width: 35px;
   /* display: block; */
   margin-top: 1px;
-filter: drop-shadow(3px 2px 1px #dfdcdc);
+/* filter: drop-shadow(3px 2px 1px #dfdcdc); */
+filter: drop-shadow(5px 4px 3px #d8d6d6); 
+}
+@media (max-width:600px) {
+.dictimg{
+  margin-top: 50px;
+  height: 190px;
+  width: 290px;
+}
+.searchtxt{
+  width: 270px ;
+}
+.profile{
+  align-items:start;
+}
+.App{
+  width: 100%;
+}
+.footer{
+  /* display: none; */
+  width: 100%;
+  /* margin-top:45% ; */
+  position: relative;
+  bottom: 0px;
+  font-size: 15px;
+  text-align: center;
+}
+.navbar-nav h5{
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  bottom: 0px;
 
+}
+.navbarpg{
+  width: 100%;
+  position: relative;
+  top: 0px;
+}
+.container{
+  width: 100%;
+}
+.showResults{
+width: 100%;
+}
   
 }
 

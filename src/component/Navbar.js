@@ -12,7 +12,7 @@ const Navbar = () => {
 
   // const state =useSelector((state)=> state.handleCart)
   return (
-    <div>
+    <div className="navbarpg">
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm ">
         <div className="container">
           <NavLink className="navbar-brand fw-bold fs-4" to="/">

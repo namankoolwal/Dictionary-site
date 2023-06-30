@@ -3,10 +3,11 @@ import React from "react";
 const Footer = () => {
   return (
     <>
+    <div className="footer">
        <div className="flex-column justify-content-top">
        <div className="navbar navbar-expand-lg navbar-light bg-white py-1 shadow-lg ">
          <div className=" navbar-nav mx-auto mb-2 mb-lg-0 " id="navbarSupportedContent">
-           <div className="navbar-nav " >
+           <div className="navbar-nav" >
              <h5>
              
                <i className="fa fa-copyright me-5"> 2023 NAMAN KHANDELWAL</i>
@@ -34,6 +35,7 @@ const Footer = () => {
            </div>
          </div>
        </div>
+     </div>
      </div>
      </>
   );
