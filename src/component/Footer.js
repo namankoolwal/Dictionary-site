@@ -3,16 +3,29 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-    <div className="footer">
-       <div className="flex-column justify-content-top">
+      {/* <div className="footer">
+       <div className="flex-column justify-content-bottom">
        <div className="navbar navbar-expand-lg navbar-light bg-white py-1 shadow-lg ">
          <div className=" navbar-nav mx-auto mb-2 mb-lg-0 " id="navbarSupportedContent">
            <div className="navbar-nav" >
              <h5>
              
                <i className="fa fa-copyright me-5"> 2023 NAMAN KHANDELWAL</i>
-             </h5>         
-             {/* <div className="nav-item " id="navbarSupportedContent">
+             </h5>   */}
+
+
+
+      <footer class="page-footer font-small blue">
+
+        <div class="footer-copyright text-center py-1 shadow-lg">© 2023 NAMAN KHANDELWAL
+          {/* <a href="/"> MDBootstrap.com</a> */}
+        </div>
+
+      </footer>
+
+
+
+      {/* <div className="nav-item " id="navbarSupportedContent">
                <a href="https://instagram.com/naman_koolwal"> 
                  <i className="fa fa-instagram me-4"> Instagram</i>
                </a>
@@ -32,12 +45,15 @@ const Footer = () => {
                  <i className="fa fa-envelope me-4"> E-Mail</i>
                </a>
              </div> */}
-           </div>
+
+
+
+      {/* </div>
          </div>
        </div>
      </div>
-     </div>
-     </>
+     </div> */}
+    </>
   );
 };
 
