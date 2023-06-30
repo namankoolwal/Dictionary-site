@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-
 const Navbar = () => {
     // const state =useSelector((state)=> state.handleCart)
   return (
@@ -12,7 +11,7 @@ const Navbar = () => {
         {/* <img  src="N-tra.png" alt="hii"  height={"35px"} width={"140px"}></img>  */}
         <i class="fa fa-book" aria-hidden="true"></i> N-DICTIONARY
           </NavLink>
-          {/* <button
+          <button
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -22,7 +21,7 @@ const Navbar = () => {
             aria-label="Toggle navigation">
 
             <span className="navbar-toggler-icon"></span>
-          </button> */}
+          </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
@@ -49,6 +48,7 @@ const Navbar = () => {
            <div className="buttons">
             <NavLink to="/login" className="btn btn-outline-dark">
              <i className="fa fa-sign-in me-1"></i> Login</NavLink>
+            
              <NavLink to="/register" className="btn btn-outline-dark ms-2">
              <i className="fa fa-user-plus me-1"></i> Register</NavLink>
              {/* <NavLink to="/cart" className="btn btn-outline-dark ms-2">

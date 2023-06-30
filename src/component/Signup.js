@@ -1,13 +1,24 @@
-import React from 'react'
+import { Alert } from 'bootstrap'
+import React, { useEffect } from 'react'
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { GoogleLogin } from '@react-oauth/google';
+import { googleLogout } from '@react-oauth/google';
+import jwt_decode from 'jwt-decode'
+
 
 const Signup = () => {
+
+    useEffect(() => {
+
+    }, []);
+
+    function falert() {
+        alert("USER REGISTERED SUCCESFULLY")
+
+
+    }
     return (
         <div>
-            {/* <!-- Button trigger modal --> */}
-            {/* <button type="button" className="btn btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#signupModal">
-                <span className="fa fa-user-plus me-1"></span> Register
-            </button> */}
-
             {/* <!-- Modal --> */}
             <div className="px-4 my-5 bg-light rounded-3 py-5" id="signupModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
@@ -16,16 +27,30 @@ const Signup = () => {
                             <h5 className="modal-title" id="exampleModalLabel">Register</h5>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <br/>
+
                         <div className="modal-body">
-                            <button className="btn btn-primary w-100 mb-4">
-                                <span className="fa fa-google me-2"></span> Sign up With Google
-                            </button>
-                            <button className="btn btn-primary w-100 mb-4">
-                                <span className="fa fa-facebook me-2"></span> Sign up With Facebook
-                            </button>
+                            <div className="modal-body mx-3">
+
+                                <GoogleOAuthProvider clientId="78940162672-otnijmqjlr47tj63g4sske1ef13dovqi.apps.googleusercontent.com">
+                                    <GoogleLogin
+                                        theme='filled_blue'
+                                        shape='rectangular'
+                                        width='400'
+                                        onSuccess={credentialResponse => {
+                                            const details = jwt_decode(credentialResponse.credential)
+                                            console.log(details);
+                                            console.log(credentialResponse);
+                                            alert("Account Login Succesfully")
+                                        }}
+                                        onError={() => {
+                                            console.log('Login Failed');
+                                        }}
+                                    />
+
+                                </GoogleOAuthProvider>
+                            </div>
                             <form>
-                                <div className="mb-3">
+                                <div className="mb-3 w-80">
                                     <label htmlFor="exampleInput" className="form-label">Username</label>
                                     <input type="text" className="form-control" id="exampleInput" />
                                 </div>
@@ -42,7 +67,7 @@ const Signup = () => {
                                     <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                                     <label className="form-check-label" htmlFor="exampleCheck1">Remember Me</label>
                                 </div>
-                                <button type="submit" className="btn btn-outline-primary w-100 mt-5">Register</button>
+                                <button type="submit" className="btn btn-outline-primary w-100 mt-5" onClick={falert} >Register</button>
                             </form>
                         </div>
                     </div>

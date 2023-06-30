@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { GoogleLogin } from '@react-oauth/google';
+import { googleLogout } from '@react-oauth/google';
+import jwt_decode from 'jwt-decode'
+
 
 const Login = () => {
+
+    useEffect(() => {
+
+    }, []);
+
+    function falert() {
+        alert("Login Successfully")
+    }
     return (
         <>
-
             <div
                 className="px-4 my-5 bg-light rounded-3 py-5"
                 id="loginModal"
@@ -23,15 +35,28 @@ const Login = () => {
                                 aria-label="Close"
                             ></button>
                         </div>
-                        <br/>
                         <div className="modal-body">
-                            <button className="btn btn-primary w-100 mb-4">
-                                <span className="fa fa-google me-2"></span> Sign in With Google
-                            </button>
-                            <button className="btn btn-primary w-100 mb-4">
-                                <span className="fa fa-facebook me-2"></span> Sign in With
-                                Facebook
-                            </button>
+                            <div className="modal-body mx-3">
+
+                                <GoogleOAuthProvider clientId="78940162672-otnijmqjlr47tj63g4sske1ef13dovqi.apps.googleusercontent.com">
+                                    <GoogleLogin
+                                        theme='filled_blue'
+                                        shape='rectangular'
+                                        width='400'
+                                        text="continue_with"
+                                        onSuccess={credentialResponse => {
+                                            const details = jwt_decode(credentialResponse.credential)
+                                            console.log(details);
+                                            console.log(credentialResponse);
+                                            alert("Welcome Back")
+                                        }}
+                                        onError={() => {
+                                            console.log('Login Failed');
+                                        }}
+                                    />
+
+                                </GoogleOAuthProvider>
+                            </div>
                             <form>
                                 <div className="mb-3">
                                     <label htmlFor="exampleInputEmail1" className="form-label">
@@ -70,6 +95,7 @@ const Login = () => {
                                 <button
                                     type="submit"
                                     className="btn btn-outline-primary w-100 mt-5"
+                                    onClick={falert}
                                 >
                                     Log In
                                 </button>
