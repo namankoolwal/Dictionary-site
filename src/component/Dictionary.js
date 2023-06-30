@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaSearch } from "react-icons/fa";
 import { FcSpeaker } from "react-icons/fc";
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 
 const Dictionary = () => {
     const [searchWord, setSearchWord] = useState('');

@@ -1,15 +1,16 @@
 import React, { useEffect } from "react";
-import { GoogleOAuthProvider } from '@react-oauth/google';
-import { GoogleLogin } from '@react-oauth/google';
-import { googleLogout } from '@react-oauth/google';
-import jwt_decode from 'jwt-decode'
+// import { GoogleOAuthProvider } from '@react-oauth/google';
+// import { GoogleLogin } from '@react-oauth/google';
+// import jwt_decode from 'jwt-decode';
+import { useAuth0 } from "@auth0/auth0-react";
+
+
 
 
 const Login = () => {
 
-    useEffect(() => {
+    const { loginWithRedirect } = useAuth0();
 
-    }, []);
 
     function falert() {
         alert("Login Successfully")
@@ -38,7 +39,12 @@ const Login = () => {
                         <div className="modal-body">
                             <div className="modal-body mx-3">
 
-                                <GoogleOAuthProvider clientId="78940162672-otnijmqjlr47tj63g4sske1ef13dovqi.apps.googleusercontent.com">
+
+                            <button onClick={() => loginWithRedirect()}>Log In</button>
+
+
+
+                                {/* <GoogleOAuthProvider clientId="78940162672-otnijmqjlr47tj63g4sske1ef13dovqi.apps.googleusercontent.com">
                                     <GoogleLogin
                                         theme='filled_blue'
                                         shape='rectangular'
@@ -53,9 +59,12 @@ const Login = () => {
                                         onError={() => {
                                             console.log('Login Failed');
                                         }}
+                                        //  useOneTap
                                     />
 
-                                </GoogleOAuthProvider>
+                                </GoogleOAuthProvider> */}
+
+
                             </div>
                             <form>
                                 <div className="mb-3">

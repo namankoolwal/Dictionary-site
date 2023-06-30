@@ -87,4 +87,12 @@ filter: drop-shadow(6px 5px 4px #dfdcdc);
 h1{
 filter: drop-shadow(6px 5px 4px #cecccc);
 }
+.profile{
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  /* display: block; */
+  margin-top: 1px;
+  
+}
 
