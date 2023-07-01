@@ -22,10 +22,15 @@ h2{
 font-size: 30px;
 text-decoration: underline;
 padding-bottom: 20px;
+text-transform: uppercase;
 }
 
 h4{
- color: #589ea1;
+ color: #34c470;
+ text-transform: uppercase;
+}
+p{
+  text-transform: uppercase;
 }
 
 .searchtxt{
@@ -35,6 +40,7 @@ font-size: 20px;
 padding-left: 10px;
 filter: drop-shadow(6px 5px 4px #646363);
 border: 1px solid #12b958;
+/* text-transform: uppercase; */
 
 }
 .searchtxt:focus{
