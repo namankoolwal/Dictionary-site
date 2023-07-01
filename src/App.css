@@ -76,6 +76,10 @@ padding: 20px;
 filter: drop-shadow(6px 5px 4px #bdbcbc);
 
 }
+.showError > h4{
+  margin-right: 45px;
+  color: rgb(218, 11, 11);
+}
 
 .showResults > h2 > button{
 background: none;

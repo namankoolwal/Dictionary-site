@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { FaSearch } from "react-icons/fa";
 import { FcSpeaker } from "react-icons/fc";
-// import Navbar from './Navbar';
 
 const Dictionary = () => {
     const [searchWord, setSearchWord] = useState('');
     const [data, setSearchResults] = useState('');
+    const [error, setError] = useState('');
+
 
     useEffect(() => {
         fetchSearchResults();
@@ -21,8 +22,15 @@ const Dictionary = () => {
         });
 
         let data = await response.json();
+        if(!data.length){
+            setError('No such word found');
+            setSearchResults(null);
+        }
+        else{
         console.log(data[0]);
         setSearchResults(data[0]);
+        setError('');
+        }
     }
 
     function playAudio() {
@@ -32,8 +40,6 @@ const Dictionary = () => {
 
     return (
         <div className="App">
-        {/* <Navbar/> */}
-           {/* <h1>Free Dictionary</h1> */}
            <div className='searchBox'>
            <div className='container'>
             <img className='dictimg' src='/assets/book.jpeg'
@@ -41,12 +47,16 @@ const Dictionary = () => {
             </img> 
             </div>
                   <br/>
-                  {/* <input type="text" class="form-control searchtxt" id="exampleForm" placeholder="John Smith" value={searchWord} onChange={handleSearchWordChange}/> */}
                     <input className='searchtxt' type="text" placeholder='Search..' value={searchWord} onChange={handleSearchWordChange} />
                 <button onClick={fetchSearchResults}> <FaSearch size="20px" /> </button>
                 </div>
             <ul>
-
+                {error && ( 
+                    <div className="showError">
+                    <br/>
+                <h4>{error}</h4>
+                </div>
+                )} 
                 {data && (
                     <div className="showResults">
                         <h2>
