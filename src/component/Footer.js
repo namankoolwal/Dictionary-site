@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <>
 
-      <footer className="page-footer font-small fixed-bottom bg-white ">
-        <div className="footer-copyright text-center py-1 shadow-lg sticky-bottom">© 2023 NAMAN KHANDELWAL
+      <footer className="page-footer font-small fixed-bottom bg-light ">
+        <div className="footer-copyright text-center py-1 shadow-lg ">© 2023 NAMAN KHANDELWAL
         </div>
       </footer>
     </>
