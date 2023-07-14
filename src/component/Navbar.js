@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="container">
           <NavLink className="navbar-brand fw-bold fs-4" to="/">
             {/* <img  src="N-tra.png" alt="hii"  height={"35px"} width={"140px"}></img>  */}
-            <i class="fa fa-book" aria-hidden="true"></i> N-DICTIONARY
+            <i class="fa fa-book" aria-hidden="true"></i> AdDiction
           </NavLink>
           <button
             className="navbar-toggler"
