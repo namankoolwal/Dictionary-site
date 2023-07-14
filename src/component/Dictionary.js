@@ -16,22 +16,43 @@ const Dictionary = () => {
         setSearchWord(event.target.value);
     }
 
-    const fetchSearchResults = async () => {
-        let response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchWord}`, {
-            method: "GET",
-        });
+    // const fetchSearchResults = async () => {
+    //     let response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchWord}`, {
+    //         method: "GET",
+    //     });
 
-        let data = await response.json();
-        if(!data.length){
-            setError('No such word found');
-            setSearchResults(null);
-        }
-        else{
-        console.log(data[0]);
-        setSearchResults(data[0]);
-        setError('');
-        }
-    }
+    //     let data = await response.json();
+    //     if(!data.length){
+    //         setError('No such word found');
+    //         setSearchResults(null);
+    //     }
+    //     else{
+    //     console.log(data[0]);
+    //     setSearchResults(data[0]);
+    //     setError('');
+    //     }
+        
+    // }
+
+    const fetchSearchResults = () => {
+        fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchWord}`)
+          .then(response => response.json())
+          .then(data => {
+            if (!data.length) {
+              setError(data.title);
+              setSearchResults(null);
+            //   console.log(data.title)
+              console.log(data)
+            } else {
+              setError('');
+              console.log(data[0]);
+              setSearchResults(data[0]);
+            }
+          })
+      };
+
+
+
 
     function playAudio() {
         let audio = new Audio(data.phonetics[0].audio);
