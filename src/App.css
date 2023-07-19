@@ -26,7 +26,7 @@ text-transform: uppercase;
 }
 
 h4{
- color: #34c470;
+ color: #24a359;
  text-transform: uppercase;
 }
 p{
@@ -38,8 +38,8 @@ width: 580px;
 height: 38px;
 font-size: 20px;
 padding-left: 10px;
-filter: drop-shadow(6px 5px 4px #646363);
-border: 1px solid #12b958;
+filter: drop-shadow(6px 5px 4px #646363ab);
+border: 1px solid #12b957;
 /* text-transform: uppercase; */
 
 }
@@ -53,7 +53,7 @@ border: 1px solid #12b958;
     margin:auto;
     border-radius: 10px;
     margin-top: 1em;
-    filter: drop-shadow(6px 5px 4px #646363);
+    filter: drop-shadow(6px 5px 4px #646363ab);
   }
 
 .searchBox > button{
@@ -65,7 +65,7 @@ color: rgb(255, 255, 255);
 cursor: pointer;
 padding: 9px;
 margin: 2px;
-filter: drop-shadow(6px 5px 4px #646363);
+filter: drop-shadow(6px 5px 4px #646363ab);
 
 }
 
@@ -93,11 +93,11 @@ cursor: pointer;
 } */
 .navbar-brand{
   color: black;
-filter: drop-shadow(6px 5px 4px #dfdcdc);
+filter: drop-shadow(6px 5px 4px #dfdcdcb9);
 
 }
 h1{
-filter: drop-shadow(6px 5px 4px #cecccc);
+filter: drop-shadow(6px 5px 4px #cecccccb);
 }
 .profile{
   border-radius: 50%;
@@ -106,7 +106,7 @@ filter: drop-shadow(6px 5px 4px #cecccc);
   /* display: block; */
   margin-top: 1px;
 /* filter: drop-shadow(3px 2px 1px #dfdcdc); */
-filter: drop-shadow(5px 4px 3px #d8d6d6); 
+filter: drop-shadow(5px 4px 3px #d8d6d696); 
 }
 @media (max-width:600px) {
 .dictimg{
